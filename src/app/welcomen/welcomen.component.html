@@ -1,0 +1,22 @@
+<ActionBar class="action-bar"></ActionBar>
+<GridLayout rows="auto,auto,*" class="contenedor-master">
+    <GridLayout row="0" rows="*,auto,auto,auto" class="contenedor-perfil">
+        <!-- <Image src="https://randomuser.me/api/portraits/men/32.jpg" row="0" verticalAlignment="middle" horizontalAlignment="center" class="avatar"></Image> -->
+        <Image src="https://avatars.githubusercontent.com/u/7539995?v=4" row="0" verticalAlignment="middle" horizontalAlignment="center" class="avatar"></Image>
+        <Label text="Wuilmer Medrano" row="1" verticalAlignment="middle" horizontalAlignment="center" textWrap="true" class="lbl-name"></Label>
+        <Label text="hola, soy desarrollador de software. Exploro distintos lenguajes, experimento con nuevas ideas y siempre busco soluciones únicas." textWrap="true" row="2" verticalAlignment="middle" horizontalAlignment="center" class="lbl-description"></Label>
+        <MenuButton text="Ver" class="btn-menu" [options]="options" (selected)="selected($event)" horizontalAlignment="center" verticalAlignment="middle" row="3"></MenuButton>
+    </GridLayout>
+
+    <Label text="Examples" row="1" verticalAlignment="middle" horizontalAlignment="left" textWrap="true" class="lbl-examples"></Label>
+    
+    <CollectionView #lista row="2" [items]="items" rowHeight="35%" (itemTap)="itemTap($event)" class="collection-view">
+        <ng-template let-item="item">
+            <GridLayout rows="auto,auto,*" class="contenedor-item">                
+                <Label [text]="item.name" textWrap="true" row="0" class="lbl-name-item" verticalAlignment="middle" horizontalAlignment="left"></Label>
+                <Label [text]="item.description" textWrap="true" row="1" class="lbl-description-item" verticalAlignment="middle" horizontalAlignment="left"></Label>
+                <Button text="Ver" row="2" [nsRouterLink]="[item.path]" class="btn-item"></Button>    
+            </GridLayout>
+        </ng-template>
+    </CollectionView>
+</GridLayout>

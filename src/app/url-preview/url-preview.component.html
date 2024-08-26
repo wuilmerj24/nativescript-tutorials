@@ -1,0 +1,12 @@
+<ActionBar title="UrlPreview" class="action-bar">
+    <NavigationButton text="Go back" android.systemIcon="ic_menu_back" (tap)="goBack()"/>
+</ActionBar>
+
+<StackLayout>
+    <UrlPreview url="https://github.com/wuilmerj24/nativescript-plugins" bgColor="red" titleTextColor="white"
+        descriptionTextColor="white" view="r" borderRadiusImage="10" loadingColor="blue" borderRadius="10"></UrlPreview>
+    <Label margin="10"></Label>
+    
+    <UrlPreview url="https://github.com/wuilmerj24/nativescript-plugins" bgColor="red" titleTextColor="white"
+        descriptionTextColor="white" view="rv" borderRadiusImage="10" loadingColor="blue" borderRadius="10"></UrlPreview>
+</StackLayout>

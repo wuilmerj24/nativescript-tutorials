@@ -32,11 +32,6 @@ Si encuentras útil este contenido, puedes apoyar mi trabajo en [Patreon](https:
     # o
     ns run ios
     ```
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Si tienes sugerencias o mejoras, no dudes en hacer un fork y enviar un pull request.
-
 ---
 
 Gracias por tu apoyo y espero que estos tutoriales te sean útiles.
